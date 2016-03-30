@@ -1,0 +1,13 @@
+body {
+  font-family: robotoFont;
+  width: 100%;
+  background: white; }
+
+header {
+  max-width: 1024px;
+  margin: 0 auto;
+  line-height: 200px; }
+  header h1 {
+    display: inline-block; }
+  header .languages {
+    float: right; }

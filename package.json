@@ -1,0 +1,25 @@
+{
+  "name": "newProject",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "angular": "~1.5.2",
+    "gulp": "~3.9.1",
+    "angular-ui-router": "~0.2.18",
+    "gulp-sass": "~2.2.0",
+    "bootstrap": "~3.3.6",
+    "gulp-connect": "~3.2.1",
+    "jquery": "~2.2.2",
+    "restangular": "~1.5.2",
+    "angular-ui-notification": "~0.1.0",
+    "i18next-client": "~1.11.4",
+    "ng-i18next": "~0.5.2",
+    "i18next": "~2.4.0"
+  }
+}

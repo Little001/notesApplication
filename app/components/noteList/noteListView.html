@@ -1,0 +1,12 @@
+<!-- partials/state1.html -->
+<h1>list</h1>
+	<ul>
+	  <li ng-repeat="note in notes">
+		  userId: {{note.userId}}<br>
+		  id: {{note.id}}<br>
+		  title: {{note.title}}<br>
+		  body: {{note.body}}<br>
+		  <a ui-sref="detail({id: note.id})">Detail</a>
+	  </li>
+	</ul>
+	

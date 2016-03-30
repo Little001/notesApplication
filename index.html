@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8"/>
+		<title>Application for notes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- scripts from NPM -->
+		<script src="/node_modules/jquery/dist/jquery.js"></script>
+		<script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="/node_modules/angular/angular.js"></script>
+		<script src="/node_modules/lodash/lodash.js"></script>
+		<script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="/node_modules/restangular/src/restangular.js"></script>
+		<script src="/node_modules/angular-ui-notification/dist/angular-ui-notification.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="/js/i18next-1.10.1.min.js"></script>
+		<script src="/js/ng-i18next.js"></script>
+		
+		<!-- Main File -->
+		<script src="/app/app.js"></script>	
+		
+		<!-- Services -->
+		<script src="/app/shared/dataProviderService.js"></script>
+		
+		<!-- Controllers -->
+		<script src="/app/shared/mainController.js"></script>
+		<script src="/app/components/noteList/noteListController.js"></script>
+		<script src="/app/components/noteDetail/noteDetailController.js"></script>
+		<script src="/app/components/noteNew/noteNewController.js"></script>
+		<script src="/app/components/noteEdit/noteEditController.js"></script>
+		
+		<!-- Route File -->
+		<script src="/app/routes.js"></script>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="/node_modules/angular-ui-notification/dist/angular-ui-notification.css">
+		<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">	
+		<link rel="stylesheet" href="/css/main.css">	
+
+		<base href="http://localhost:9000/" />
+	</head>
+	<body ng-app="myApp" ng-controller="MainController">
+		<header>
+			<h1>My notes</h1>
+			<div class="languages">
+				<img src="images/en.png" ng-click="ENlng()"/>
+				<img src="images/cz.png" ng-click="CZlng()"/>	
+			</div>
+		</header>
+			
+			<a ui-sref="list">List of notes</a>
+	    	<a ui-sref="detail({id: 15})">Detail Note</a>
+			<a ui-sref="new">New Note</a>
+			{{'errors.save_succeded' | i18next}}
+		</div>
+		<div class="content" ui-view>
+			
+		</div>
+		<footer>
+			
+		</footer>
+	</body>
+</html>

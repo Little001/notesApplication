@@ -1,0 +1,11 @@
+<!-- partials/state2.html -->
+<h1>New</h1>
+<input type="text" ng-model="title"/>
+<input type="text" ng-model="body"/>
+<button ng-click="addNote()">Add</button>
+
+<ul ng-if="newNote.id">
+	<li>{{newNote.id}}</li>
+	<li>{{newNote.title}}</li>
+	<li>{{newNote.body}}</li>
+</ul>
