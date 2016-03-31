@@ -3,12 +3,14 @@
 
 
 ## Install
-You must have installed git and nodeJS and then
+You must have installed git and nodeJS
 > Clone this repository
 
-> npm install
+> npm install (install depedencies)
 
-> Application is on port9000 (http://localhost:9000/)
+> gulp (start http server,...)
+
+> Application running on http://localhost:9000/
 
 For run tests
 > webdriver-manager start
