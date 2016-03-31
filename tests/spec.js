@@ -1,8 +1,8 @@
 // spec.js
-describe('Protractor Demo App', function() {
-  it('should have a title', function() {
-    browser.get('http://juliemr.github.io/protractor-demo/');
+describe('Protractor', function() {
+  it('title', function() {
+    browser.get('http://localhost:9000/list/');
 
-    expect(browser.getTitle()).toEqual('Super Calculator');
+    expect(browser.getTitle()).toEqual('Application for notes');
   });
 });

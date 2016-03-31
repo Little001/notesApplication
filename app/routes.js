@@ -7,7 +7,7 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider, $loc
 		useLocalStorage: false,
 		fallbackLng: 'dev',
 		resGetPath: '../locales/EN/translation.json',
-		defaultLoadingValue: '' // ng-i18next option, *NOT* directly supported by i18next
+		defaultLoadingValue: ''
 	};  
  
     

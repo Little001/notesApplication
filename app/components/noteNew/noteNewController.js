@@ -1,7 +1,7 @@
 /**
-* Project Controller
+* noteNewController 
 *
-* @class ProjectController
+* @class noteNewController
 * @constructor
 */
 

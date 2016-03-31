@@ -1,3 +1,10 @@
+/**
+* MainController 
+*
+* @class MainController
+* @constructor
+*/
+
 angular.module('appControllers')
   .controller('MainController', ['$scope', '$i18next', function($scope, $i18next){
           

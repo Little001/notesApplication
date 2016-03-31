@@ -1,8 +1,8 @@
 /**
-* Data Provider Service is in charge of working with packets 
+* Data Provider Service is for query to REST API
 *
 * @module Service
-* @class AccessService
+* @class DataProvider
 * @constructor
 */
 angular.module('appServices')
@@ -10,6 +10,8 @@ angular.module('appServices')
 		'use strict';
 		var Provider = {};
 		
+		
+		/* get all notes from api */ 
 		Provider.getAllNotes = function(){
 			return Restangular.all('posts').getList()
 			.then(function(notes){
@@ -20,7 +22,8 @@ angular.module('appServices')
 				Notification.error($filter('i18next')('errors.get_error'));
 			});
 		};
-		
+
+		/* get one note from api */		
 		Provider.getNote = function(id){
 			return Restangular.one("posts", id).get()
 			.then(function(note){
@@ -32,6 +35,7 @@ angular.module('appServices')
 			});
 		};
 		
+		/* add note to api */
 		Provider.addNote = function(_title, _body){
 			return Restangular.all('posts').post({
 							title: _title,
@@ -47,6 +51,7 @@ angular.module('appServices')
 						});
 		};
 		
+		/* delete note from api */
 		Provider.deleteNote = function(note){
 				var editFirstAccount = Restangular.copy(note);
 				editFirstAccount.remove().then(function(){
@@ -60,6 +65,7 @@ angular.module('appServices')
 				});
 		};
 		
+		/* edit note from api */
 		Provider.editNote = function(note){
 				var editFirstAccount = Restangular.copy(note);
 				editFirstAccount.save().then(function(){
