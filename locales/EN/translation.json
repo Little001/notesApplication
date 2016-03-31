@@ -1,8 +1,29 @@
 {
 	"texts": {
-		"edit": "edit"
+		"edit": "Edit",
+		"user_id": "User ID",
+		"title": "Title",
+		"body": "Body",
+		"delete": "Delete", 
+		"id": "ID",
+		"detail": "Detail",
+		"list_notes": "List of notes",
+		"new_note": "New note",
+		"add": "Add",
+		"added_note": "Added note",
+		"my_notes": "My notes",
+		"footer": "Web for testing angular no for graphics design"
 	},
 	"errors": {
-		"save_succeded": "Save was Succeded"
+		"get_error": "Error in GET query",
+		"post_error": "Error in POST query",
+		"delete_error": "Error in DELETE query",
+		"put_error": "Error in PUT query",
+		"required": "All inputs are required"
+	},
+	"success": {
+		"save_succeded": "Save was Succeded",
+		"add_note": "Note was added",
+		"delete": "Delete succeeded"	
 	}
 }

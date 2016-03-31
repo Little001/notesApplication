@@ -39,25 +39,24 @@
 
 		<base href="http://localhost:9000/" />
 	</head>
+	
 	<body ng-app="myApp" ng-controller="MainController">
 		<header>
-			<h1>My notes</h1>
-			<div class="languages">
-				<img src="images/en.png" ng-click="ENlng()"/>
-				<img src="images/cz.png" ng-click="CZlng()"/>	
+			<div class="up">
+				<h1 ui-sref="list">{{'texts.my_notes' | i18next}}</h1>
+				<div class="languages">
+					<img src="images/en.png" ng-click="ENlng()"/>
+					<img src="images/cz.png" ng-click="CZlng()"/>	
+				</div>
+			</div>
+			<div class="down">
+				<button type="button" class="btn btn-primary" ui-sref="list">{{'texts.list_notes' | i18next}}</button>
+				<button type="button" class="btn btn-primary" ui-sref="new">{{'texts.new_note' | i18next}}</button>
 			</div>
 		</header>
-			
-			<a ui-sref="list">List of notes</a>
-	    	<a ui-sref="detail({id: 15})">Detail Note</a>
-			<a ui-sref="new">New Note</a>
-			{{'errors.save_succeded' | i18next}}
-		</div>
-		<div class="content" ui-view>
-			
-		</div>
+		<div class="content" ui-view></div>
 		<footer>
-			
+			<span>{{'texts.footer' | i18next}} :-)</span>
 		</footer>
 	</body>
 </html>

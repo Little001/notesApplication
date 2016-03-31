@@ -1,11 +1,22 @@
-<!-- partials/state2.html -->
-<h1>New</h1>
-<input type="text" ng-model="title"/>
-<input type="text" ng-model="body"/>
-<button ng-click="addNote()">Add</button>
+<h1>{{'texts.new_note' | i18next}}</h1>
+<form>
+  <div class="form-group">
+    <label for="text">{{'texts.title' | i18next}}:</label>
+    <input type="text" class="form-control" id="title" ng-model="title" required="number">
+  </div>
+  <div class="form-group">
+    <label for="body">{{'texts.body' | i18next}}:</label>
+    <input type="text" class="form-control" id="body" ng-model="body" required="number">
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="addNote()" value="{{'texts.add' | i18next}}"/>
+</form>
+<div class="newNote" ng-if="newNote.id">
+  <h3>{{'texts.added_note' | i18next}}</h3>
+  <ul>
+  	<li>{{'texts.id' | i18next}}: {{newNote.id}}</li>
+  	<li>{{'texts.title' | i18next}}: {{newNote.title}}</li>
+  	<li>{{'texts.body' | i18next}}: {{newNote.body}}</li>
+  </ul>
+</div>
 
-<ul ng-if="newNote.id">
-	<li>{{newNote.id}}</li>
-	<li>{{newNote.title}}</li>
-	<li>{{newNote.body}}</li>
-</ul>
+

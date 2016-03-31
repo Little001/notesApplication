@@ -6,7 +6,7 @@
 * @constructor
 */
 angular.module('appServices')
-	.factory('DataProvider', ['Restangular', 'Notification', '$state', function(Restangular, Notification, $state){
+	.factory('DataProvider', ['Restangular', 'Notification', '$state', '$filter', function(Restangular, Notification, $state, $filter){
 		'use strict';
 		var Provider = {};
 		
@@ -17,7 +17,7 @@ angular.module('appServices')
 				return notes;
 			}).catch(function(){
 				console.log('Error in GET query');
-				Notification.error('Error in GET query');
+				Notification.error($filter('i18next')('errors.get_error'));
 			});
 		};
 		
@@ -28,7 +28,7 @@ angular.module('appServices')
 				return note;
 			}).catch(function(){
 				console.log('Error in GET query');
-				Notification.error('Error in GET query');
+				Notification.error($filter('i18next')('errors.get_error'));
 			});
 		};
 		
@@ -38,10 +38,12 @@ angular.module('appServices')
 							body: _body
 						}).then(function(note){
 							console.log('POST query succeeded');
+							
+							Notification.success($filter('i18next')('success.add_note'));
 							return note;
 						}).catch(function(){
 							console.log('Error in POST query');
-							Notification.error('Error in POST query');
+							Notification.error($filter('i18next')('errors.post_error'));
 						});
 		};
 		
@@ -50,11 +52,11 @@ angular.module('appServices')
 				editFirstAccount.remove().then(function(){
 					console.log("Delete succeeded");
 					$state.go('list').then(function(){
-						Notification.success('Delete succeeded');
+						Notification.success($filter('i18next')('success.delete'));
 					});
 				}).catch(function(){
 					console.log("Delete fail");
-					Notification.error('Error in DELETE query');
+					Notification.error($filter('i18next')('errors.delete_error'));
 				});
 		};
 		
@@ -63,16 +65,13 @@ angular.module('appServices')
 				editFirstAccount.save().then(function(){
 					console.log("Note was saved");
 					$state.go('list').then(function(){
-						Notification.success('Note was saved');
+						Notification.success($filter('i18next')('success.save_succeded'));
 					});
 				}).catch(function(){
 					console.log("Saved fail");
-					Notification.error('Error in PUT query');
+					Notification.error($filter('i18next')('errors.put_error'));
 				});
 		};
-		
-		
-		
 		
 		return Provider;
 	}]);

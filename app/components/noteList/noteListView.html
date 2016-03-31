@@ -1,12 +1,13 @@
-<!-- partials/state1.html -->
-<h1>list</h1>
-	<ul>
-	  <li ng-repeat="note in notes">
-		  userId: {{note.userId}}<br>
-		  id: {{note.id}}<br>
-		  title: {{note.title}}<br>
-		  body: {{note.body}}<br>
-		  <a ui-sref="detail({id: note.id})">Detail</a>
+
+<h1>{{'texts.list_notes' | i18next}}</h1>
+	<ul class="list-group notesList">
+	  <li ng-repeat="note in notes" class="list-group-item">
+		  <ul>
+			  <li>{{$index + 1}}</li>
+			  <li><p>{{'texts.title' | i18next}}</p>{{note.title}}</li>
+			  <li><p>{{'texts.body' | i18next}}</p>{{note.body}}</li>
+			  <li><button type="button" class="btn btn-primary" ui-sref="detail({id: note.id})">{{'texts.detail' | i18next}}</button></li>
+		  </ul>
 	  </li>
 	</ul>
 	

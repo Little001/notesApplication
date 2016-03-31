@@ -1,10 +1,10 @@
 <!-- partials/state2.html -->
-<h1>Detail</h1>
-<ul>
-	<li>{{note.id}}</li>
-	<li>{{note.userId}}</li>
-	<li>{{note.title}}</li>
-	<li>{{note.body}}</li>
-	<li> <a ui-sref="edit({id: note.id})">Edit</a> </li>
+<h1>{{'texts.detail' | i18next}}</h1>
+<ul class="detail">
+	<li><p>{{'texts.id' | i18next}}:</p><span>{{note.id}}</span></li>
+	<li><p>{{'texts.user_id' | i18next}}:</p><span>{{note.userId}}</span></li>
+	<li><p>{{'texts.title' | i18next}}:</p><span>{{note.title}}</span></li>
+	<li><p>{{'texts.body' | i18next}}:</p><span>{{note.body}}</span></li>
 </ul>
-<button ng-click="deleteNote()">Delete</button>
+<button class="btn btn-primary" ui-sref="edit({id: note.id})">{{'texts.edit' | i18next}}</button>
+<button class="btn btn-primary" ng-click="deleteNote()">{{'texts.delete' | i18next}}</button>

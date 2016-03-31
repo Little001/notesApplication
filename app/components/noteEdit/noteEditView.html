@@ -1,7 +1,13 @@
 <!-- partials/state2.html -->
-<h1>Edit</h1>
-<ul>
-	<input type="text" ng-model="note.title"/>
-	<input type="text" ng-model="note.body"/>
-</ul>
-<button ng-click="editNote()">Edit</button>
+<h1>{{'texts.edit' | i18next}}</h1>
+<form>
+  <div class="form-group">
+    <label for="text"> {{'texts.title' | i18next}}:</label>
+    <input type="text" class="form-control" id="title" ng-model="note.title" required="number">
+  </div>
+  <div class="form-group">
+    <label for="body">{{'texts.body' | i18next}}:</label>
+    <input type="text" class="form-control" id="body" ng-model="note.body" required="number">
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="editNote()" value="{{'texts.edit' | i18next}}"/>
+</form>

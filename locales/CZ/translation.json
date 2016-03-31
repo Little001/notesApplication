@@ -1,8 +1,29 @@
 {
 	"texts": {
-		"edit": "Upravit"
+		"edit": "Editovat",
+		"user_id": "ID uživatele",
+		"title": "Titulek",
+		"body": "Tělo",
+		"delete": "Smazat", 
+		"id": "ID",
+		"detail": "Detail",
+		"list_notes": "Seznam poznámek",
+		"new_note": "Nová poznámka",
+		"add": "Přidat",
+		"added_note": "Přidaná poznámka",
+		"my_notes": "Moje poznámky",
+		"footer": "Web je pro testování Angularu ne pro design"
 	},
 	"errors": {
-		"save_succeded": "Uložení proběhlo v pořádku"
+		"get_error": "Chyba v GET dotazu",
+		"post_error": "Chyba v POST dotazu",
+		"delete_error": "Chyba v DELETE dotazu",
+		"put_error": "Chyba v PUT dotazu",
+		"required": "Všechna políčka jsou povinná"
+	},
+	"success": {
+		"save_succeded": "Uložení bylo úspěšné",
+		"add_note": "Poznámka byla přidána",
+		"delete": "Smazání bylo úspěšné"	
 	}
 }
