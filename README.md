@@ -1,6 +1,25 @@
 # Notes Application
 ### This is application for testing angularJS
 
+Application used REST api http://jsonplaceholder.typicode.com/
+
+Frameworks:
+> angular
+
+> gulp
+
+> sass
+
+> jquery
+
+> restangular
+
+> angular ui notification
+
+> i18next
+
+> protractor
+
 
 ## Install
 You must have installed git and nodeJS
@@ -16,4 +35,3 @@ For run tests
 > webdriver-manager start
 
 > Go to tests folder -> protractor conf.js
-
