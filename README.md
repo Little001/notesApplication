@@ -1,5 +1,4 @@
-# Notes Application
-### This is application for testing angularJS
+# Notes Applicationin AngularJS
 
 Application used REST api http://jsonplaceholder.typicode.com/
 
