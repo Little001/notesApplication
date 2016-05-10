@@ -1,4 +1,4 @@
-# Notes Applicatio nin AngularJS
+# Notes Application in AngularJS
 
 Application used REST api http://jsonplaceholder.typicode.com/
 
